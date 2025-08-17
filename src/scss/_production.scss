@@ -1,0 +1,114 @@
+.production {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.production__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.production__title {
+  font-size: 4.4rem;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 100%;
+  letter-spacing: -0.2rem;
+  padding: 0 3rem;
+  margin-bottom: 5rem;
+}
+
+.production__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 2rem;
+  grid-auto-rows: 1fr;
+}
+
+.production__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.production__card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 3rem;
+  border-radius: 3rem;
+  background: #fff;
+  color: var(--text-color);
+  gap: 2rem;
+
+  &--green {
+    background-color: var(--primary-color);
+    color: white;
+  }
+}
+
+.production__card-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.production__card-title {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.096rem;
+}
+
+.production__card-image-container {
+  flex-shrink: 0;
+  position: relative;
+  width: 15.6rem;
+  height: 12rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.production__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.production__card-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  grid-row-gap: 1rem;
+  margin-top: auto;
+}
+
+.production__card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.production__card-item-key {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.01rem;
+  font-family: var(--inter);
+}
+
+.production__card-item-value {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.025rem;
+  font-family: var(--inter);
+  opacity: 0.5;
+}

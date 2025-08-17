@@ -1,0 +1,106 @@
+.end {
+  position: relative;
+  isolation: isolate;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3rem;
+  overflow: hidden;
+  background-color: var(--text-color);
+  color: white;
+}
+
+.end__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  }
+}
+
+.end__content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-areas: ". . . ." "title title title title" "bottom bottom bottom bottom";
+  padding: 5rem;
+  grid-gap: 1rem;
+}
+
+.end__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.end__title {
+  font-size: 10rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  font-family: var(--rf-dewi-expanded);
+  grid-area: title;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.end__bottom-row {
+  grid-area: bottom;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas: "left right";
+  align-self: flex-end;
+}
+
+.end__left {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+}
+.end__right {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  text-align: right;
+}
+
+.end__address {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.025rem;
+  margin-bottom: 2rem;
+}
+
+.end__phone,
+.end__email {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 115%;
+  color: rgba(#f4f4f4, 0.8);
+}
+
+.end__email {
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+}
