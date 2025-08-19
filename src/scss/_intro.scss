@@ -113,6 +113,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  overflow: hidden;
+  overflow: clip;
 }
 
 .intro__numbers-card-title {

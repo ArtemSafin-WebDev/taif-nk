@@ -3,6 +3,7 @@ import "swiper/css";
 import { Autoplay, Keyboard, Mousewheel, EffectFade } from "swiper/modules";
 import investments from "./slides/investments";
 import "swiper/scss/effect-fade";
+import intro from "./slides/intro";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -11,6 +12,10 @@ export default function slideshow() {
   elements.forEach((element) => {
     const container = element.querySelector<HTMLElement>(".swiper");
     if (!container) return;
+
+    let context: gsap.Context | null = null;
+
+    let contexts: gsap.Context[] = [];
 
     const animateSlide = (swiper: Swiper) => {
       console.log("Active slide index", swiper.activeIndex);
@@ -21,7 +26,9 @@ export default function slideshow() {
       console.log("Section name", name);
 
       if (name === "investments") {
-        investments(section);
+        contexts[swiper.activeIndex] = investments(section);
+      } else if (name === "intro") {
+        contexts[swiper.activeIndex] = intro(section);
       }
     };
 
@@ -45,6 +52,12 @@ export default function slideshow() {
       on: {
         init: animateSlide,
         slideChange: animateSlide,
+        slideChangeTransitionEnd: (swiper) => {
+          if (contexts[swiper.previousIndex]) {
+            contexts[swiper.previousIndex].revert();
+            delete contexts[swiper.previousIndex];
+          }
+        },
       },
     });
     instance.init();
