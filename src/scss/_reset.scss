@@ -26,6 +26,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-size: clamp(2px, 0.6vw, 125px);
   font-size: clamp(2px, 0.56vw, 125px);
+
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
   scroll-padding-top: 10rem;
@@ -162,11 +163,6 @@ a:where(:not[class]) {
   &:visited {
     color: var(--primary-color);
   }
-}
-
-svg {
-  flex-shrink: 0;
-  fill: currentColor;
 }
 
 img {

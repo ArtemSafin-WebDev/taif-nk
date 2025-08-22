@@ -1,0 +1,55 @@
+.npz-scheme {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 3rem;
+  padding: 5rem;
+}
+
+.npz-scheme__heading {
+  font-size: 4.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.2rem;
+}
+
+.npz-scheme__wrapper {
+  display: block;
+  pointer-events: none;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    & > * {
+      // pointer-events: all;
+      // &[class*="green-line"] {
+      //   display: none;
+      // }
+      // &[class*="orange-line"] {
+      //   display: none;
+      // }
+      // &[class*="blue-line"] {
+      //   display: none;
+      // }
+      // &[class*="grey-line"] {
+      //   display: none;
+      // }
+      // &[class*="brown-line"] {
+      //   display: none;
+      // }
+      // &[class*="block"] {
+      //   display: none;
+      // }
+      // &[class^="label"] {
+      //   display: none;
+      // }
+      // &[class^="small-label"] {
+      //   display: none;
+      // }
+    }
+  }
+}

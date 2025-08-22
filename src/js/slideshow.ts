@@ -5,6 +5,8 @@ import investments from "./slides/investments";
 import "swiper/scss/effect-fade";
 import intro from "./slides/intro";
 import dynamics from "./slides/dynamics";
+import npzScheme from "./slides/npzScheme";
+import sulfur from "./slides/sulfur";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -30,6 +32,10 @@ export default function slideshow() {
         contexts[swiper.activeIndex] = intro(section);
       } else if (name === "dynamics") {
         contexts[swiper.activeIndex] = dynamics(section);
+      } else if (name === "npz-scheme") {
+        contexts[swiper.activeIndex] = npzScheme(section);
+      } else if (name === "sulfur") {
+        contexts[swiper.activeIndex] = sulfur(section);
       }
     };
 
@@ -41,7 +47,7 @@ export default function slideshow() {
       fadeEffect: {
         crossFade: true,
       },
-      longSwipesRatio: 0.2,
+      longSwipesRatio: 0.1,
       keyboard: {
         onlyInViewport: false,
         enabled: true,
