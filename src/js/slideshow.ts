@@ -7,6 +7,7 @@ import intro from "./slides/intro";
 import dynamics from "./slides/dynamics";
 import npzScheme from "./slides/npzScheme";
 import sulfur from "./slides/sulfur";
+import light from "./slides/light";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -36,6 +37,8 @@ export default function slideshow() {
         contexts[swiper.activeIndex] = npzScheme(section);
       } else if (name === "sulfur") {
         contexts[swiper.activeIndex] = sulfur(section);
+      } else if (name === "light") {
+        contexts[swiper.activeIndex] = light(section);
       }
     };
 
