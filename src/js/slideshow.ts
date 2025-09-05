@@ -15,6 +15,7 @@ import info from "./slides/info";
 import position from "./slides/position";
 import developments from "./slides/developments";
 import production from "./slides/production";
+import taifcombi from "./slides/taifcombi";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -60,6 +61,8 @@ export default function slideshow() {
         contexts[swiper.activeIndex] = developments(section);
       } else if (name === "production") {
         contexts[swiper.activeIndex] = production(section);
+      } else if (name === "taifcombi") {
+        contexts[swiper.activeIndex] = taifcombi(section);
       }
     };
 
