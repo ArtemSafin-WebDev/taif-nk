@@ -10,6 +10,7 @@ import sulfur from "./slides/sulfur";
 import light from "./slides/light";
 import powers from "./slides/powers";
 import generalScheme from "./slides/generalScheme";
+import processing from "./slides/pocessing";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -45,6 +46,8 @@ export default function slideshow() {
         contexts[swiper.activeIndex] = powers(section);
       } else if (name === "general-scheme") {
         contexts[swiper.activeIndex] = generalScheme(section);
+      } else if (name === "processing") {
+        contexts[swiper.activeIndex] = processing(section);
       }
     };
 
