@@ -1,0 +1,253 @@
+.cracking {
+  flex-grow: 1;
+
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 56.5rem);
+}
+
+.cracking__content {
+  border-radius: 3rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+}
+
+.cracking__heading {
+  font-size: 4.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.2rem;
+  margin-bottom: 4rem;
+  max-width: 77rem;
+}
+
+.cracking__equipment {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 30rem;
+  margin-bottom: 2rem;
+}
+
+.cracking__equipment-title {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.072rem;
+}
+
+.cracking__equipment-text {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.025rem;
+  font-family: var(--inter);
+  color: rgba(#1a1a1c, 0.5);
+}
+
+.cracking__numbers {
+  margin-top: auto;
+}
+
+.cracking__numbers-title {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.072rem;
+  margin-bottom: 3rem;
+}
+
+.cracking__numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 5rem;
+  grid-row-gap: 4rem;
+  align-items: center;
+}
+
+.cracking__numbers-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.cracking__numbers-card-prefix {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.072rem;
+}
+
+.cracking__numbers-card-amount {
+  font-size: 10rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 80%;
+}
+
+.cracking__numbers-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.cracking__numbers-card-title {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.072rem;
+}
+
+.cracking__numbers-card-text {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 115%;
+  color: rgba(#505158, 0.8);
+  max-width: 20rem;
+}
+
+.cracking__green-card {
+  padding: 3rem;
+  aspect-ratio: 408 / 209;
+  color: white;
+  gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  overflow: hidden;
+  background: #008568;
+  background-repeat: no-repeat;
+  background-position: right 2rem bottom;
+  background-size: 12.4rem auto;
+  background-image: url("../images/leaf.svg");
+}
+
+.cracking__green-card-title {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.072rem;
+}
+
+.cracking__green-card-text {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 115%;
+  color: rgba(#f4f4f4, 0.8);
+  max-width: 27rem;
+}
+
+.cracking__card {
+  position: relative;
+  z-index: 1;
+  border-radius: 3rem;
+  overflow: hidden;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.cracking__card-bg {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
+.cracking__card-bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cracking__card-wrapper {
+  padding: 4rem;
+  border-radius: 3rem;
+  background: white;
+}
+
+.cracking__card-heading {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.1rem;
+  margin-bottom: 2rem;
+}
+
+.cracking__card-text {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.025rem;
+  font-family: var(--inter);
+  margin-bottom: 4rem;
+}
+
+.cracking__card-purpose {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cracking__card-purpose-title {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.072rem;
+}
+
+.cracking__card-purpose-desc {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.025rem;
+  color: rgba(#1a1a1c, 0.5);
+
+  & > * {
+    margin-top: 1.5rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    & > li {
+      padding-left: 2rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 3px;
+        height: 3px;
+        background-color: currentColor;
+        border-radius: 50%;
+        position: absolute;
+        left: 0.5rem;
+        top: 0.55em;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
