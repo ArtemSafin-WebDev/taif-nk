@@ -17,6 +17,7 @@ import developments from "./slides/developments";
 import production from "./slides/production";
 import taifcombi from "./slides/taifcombi";
 import cracking from "./slides/cracking";
+import profile from "./slides/profile";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -66,6 +67,8 @@ export default function slideshow() {
         contexts[swiper.activeIndex] = taifcombi(section);
       } else if (name === "cracking") {
         contexts[swiper.activeIndex] = cracking(section);
+      } else if (name === "profile") {
+        contexts[swiper.activeIndex] = profile(section);
       }
     };
 

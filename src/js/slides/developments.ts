@@ -25,6 +25,15 @@ export default function developments(section: HTMLElement) {
         x: 0,
       }
     );
+
+    tl.from(
+      ".developments__bg-image",
+      {
+        duration: 1,
+        scale: 1.2,
+      },
+      "<"
+    );
     tl.fromTo(
       ".developments__count-number",
       {
