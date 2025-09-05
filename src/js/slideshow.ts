@@ -12,6 +12,9 @@ import powers from "./slides/powers";
 import generalScheme from "./slides/generalScheme";
 import processing from "./slides/pocessing";
 import info from "./slides/info";
+import position from "./slides/position";
+import developments from "./slides/developments";
+import production from "./slides/production";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -51,6 +54,12 @@ export default function slideshow() {
         contexts[swiper.activeIndex] = processing(section);
       } else if (name === "info") {
         contexts[swiper.activeIndex] = info(section);
+      } else if (name === "position") {
+        contexts[swiper.activeIndex] = position(section);
+      } else if (name === "developments") {
+        contexts[swiper.activeIndex] = developments(section);
+      } else if (name === "production") {
+        contexts[swiper.activeIndex] = production(section);
       }
     };
 
