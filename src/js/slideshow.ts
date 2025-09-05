@@ -8,6 +8,8 @@ import dynamics from "./slides/dynamics";
 import npzScheme from "./slides/npzScheme";
 import sulfur from "./slides/sulfur";
 import light from "./slides/light";
+import powers from "./slides/powers";
+import generalScheme from "./slides/generalScheme";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -39,6 +41,10 @@ export default function slideshow() {
         contexts[swiper.activeIndex] = sulfur(section);
       } else if (name === "light") {
         contexts[swiper.activeIndex] = light(section);
+      } else if (name === "powers") {
+        contexts[swiper.activeIndex] = powers(section);
+      } else if (name === "general-scheme") {
+        contexts[swiper.activeIndex] = generalScheme(section);
       }
     };
 
