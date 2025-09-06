@@ -1,0 +1,149 @@
+.invest-chart {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 3rem;
+  padding: 5rem;
+}
+
+.invest-chart__wrapper {
+  display: block;
+  pointer-events: none;
+  position: relative;
+  flex-grow: 1;
+
+  svg {
+    display: block;
+    width: 100%;
+    // height: auto;
+
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    // .chart-year {
+    //   display: none;
+    // }
+    // .right-bottom-part {
+    //   display: none;
+    // }
+
+    // .legend-item {
+    //   display: none;
+    // }
+    // .scales {
+    //   display: none;
+    // }
+    // .bottom-table {
+    //   display: none;
+    // }
+    // .chart-label {
+    //   display: none;
+    // }
+
+    // .chart-bar {
+    //   display: none;
+    // }
+
+    // .chart-line {
+    //   display: none;
+    // }
+
+    // .chart-dot {
+    //   display: none;
+    // }
+    & > * {
+      pointer-events: all;
+
+      // &[class*="first"] {
+      //   display: none;
+      // }
+      // &[class*="second"] {
+      //   display: none;
+      // }
+      // &[class*="third"] {
+      //   display: none;
+      // }
+      // &[class*="fourth"] {
+      //   display: none;
+      // }
+      // &[class*="fifth"] {
+      //   display: none;
+      // }
+      // &[class*="sixth"] {
+      //   display: none;
+      // }
+    }
+  }
+}
+
+.invest-chart__top-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.invest-chart__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.invest-chart__heading {
+  max-width: 96rem;
+  font-size: 4.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.2rem;
+}
+
+.invest-chart__subtitle {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 110%;
+  letter-spacing: -0.096rem;
+  color: #7a7b82;
+}
+
+.invest-chart__amount-wrapper {
+  display: flex;
+  gap: 3rem;
+}
+
+.invest-chart__amount {
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  color: #008568;
+  margin-top: -0.2rem;
+}
+
+.invest-chart__amount-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.invest-chart__amount-title {
+  font-size: 4.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.2rem;
+  color: #008568;
+}
+
+.invest-chart__amount-text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 115%;
+  color: #505158;
+}
