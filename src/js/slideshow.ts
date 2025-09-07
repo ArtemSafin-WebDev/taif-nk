@@ -20,6 +20,7 @@ import cracking from "./slides/cracking";
 import profile from "./slides/profile";
 import gasoline from "./slides/gasoline";
 import investChart from "./slides/investChart";
+import petrols from "./slides/petrols";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -75,6 +76,8 @@ export default function slideshow() {
         contexts[swiper.activeIndex] = gasoline(section);
       } else if (name === "invest-chart") {
         contexts[swiper.activeIndex] = investChart(section);
+      } else if (name === "petrols") {
+        contexts[swiper.activeIndex] = petrols(section);
       }
     };
 
