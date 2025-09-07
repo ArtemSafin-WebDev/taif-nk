@@ -87,7 +87,7 @@ export default function investChart(section: HTMLElement) {
         y: 10,
         stagger: 0.05,
       },
-      "<"
+      "<-=0.2"
     );
     tl.from(
       ".bottom-table",

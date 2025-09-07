@@ -1,11 +1,23 @@
 <div class="swiper-slide">
     <section class="section" data-section-name="npz-scheme">
         <div class="npz-scheme">
-            <h2 class="npz-scheme__heading">
-                Общая схема НПЗ<br>
-                на 2024 год
-            </h2>
+            <div class="npz-scheme__top-row">
+                <h2 class="npz-scheme__heading">
+                    Общая схема НПЗ<br>
+                    на 2024 год
+                </h2>
+                <img src="/images/npz-scheme-legend.svg" alt="" class="npz-scheme__legend">
+            </div>
+
             <div class="npz-scheme__wrapper">
+                <div class="npz-scheme__chart-title">
+                    <div class="npz-scheme__chart-title-top">
+                        Входящее сырье
+                    </div>
+                    <div class="npz-scheme__chart-title-bottom">
+                        Покупное сырье со стороны
+                    </div>
+                </div>
                 {{> npz-scheme-illustration }}
             </div>
         </div>

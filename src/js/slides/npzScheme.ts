@@ -5,9 +5,31 @@ gsap.registerPlugin(SplitText);
 
 export default function npzScheme(section: HTMLElement) {
   return gsap.context(() => {
+    const heading = section.querySelector(".npz-scheme__heading");
+    let headingSplit = SplitText.create(heading);
     const tl = gsap.timeline({
       delay: 0.5,
     });
+    tl.from(headingSplit.lines, {
+      autoAlpha: 0,
+      x: -300,
+      duration: 1,
+      stagger: 0.1,
+    });
+    tl.from(".npz-scheme__legend", {
+      autoAlpha: 0,
+      duration: 1,
+      y: 30,
+    });
+    tl.from(
+      ".npz-scheme__chart-title",
+      {
+        autoAlpha: 0,
+        duration: 1,
+        y: 30,
+      },
+      "<"
+    );
 
     tl.from(".label-9", {
       scale: 0,
@@ -553,6 +575,6 @@ export default function npzScheme(section: HTMLElement) {
       },
       "<"
     );
-    tl.timeScale(0.6);
+    tl.timeScale(0.8);
   }, section);
 }

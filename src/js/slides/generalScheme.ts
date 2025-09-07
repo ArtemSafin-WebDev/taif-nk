@@ -24,14 +24,10 @@ export default function generalScheme(section: HTMLElement) {
       },
       "<"
     );
-    tl.from(
-      ".second.fade",
-      {
-        autoAlpha: 0,
-        duration: 1,
-      },
-      "+=1"
-    );
+    tl.from(".second.fade", {
+      autoAlpha: 0,
+      duration: 1,
+    });
     tl.from(
       ".second.scale",
       {

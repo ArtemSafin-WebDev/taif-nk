@@ -7,6 +7,44 @@
   padding: 5rem;
 }
 
+.npz-scheme__top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+.npz-scheme__legend {
+  margin-left: auto;
+  width: 87.2rem;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.npz-scheme__chart-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: -2rem;
+}
+
+.npz-scheme__chart-title-top {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 110%;
+  letter-spacing: -0.096rem;
+}
+
+.npz-scheme__chart-title-bottom {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 115%;
+  color: rgba(#1a1a1c, 0.5);
+}
 .npz-scheme__heading {
   font-size: 4.4rem;
   font-style: normal;
@@ -18,12 +56,17 @@
 .npz-scheme__wrapper {
   display: block;
   pointer-events: none;
+  position: relative;
+  flex-grow: 1;
 
   svg {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
     & > * {
       // pointer-events: all;
       // &[class*="green-line"] {
