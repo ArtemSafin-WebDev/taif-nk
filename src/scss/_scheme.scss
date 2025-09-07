@@ -46,28 +46,67 @@
     position: absolute;
     left: 0;
     top: 0;
+    // .pie {
+    //   display: none;
+    // }
+    // .chart-title {
+    //   display: none;
+    // }
 
     & > * {
-      // pointer-events: all;
-
-      // &[class*="first"] {
-      //   display: none;
-      // }
-      // &[class*="second"] {
-      //   display: none;
-      // }
-      // &[class*="third"] {
-      //   display: none;
-      // }
-      // &[class*="fourth"] {
-      //   display: none;
-      // }
-      // &[class*="fifth"] {
-      //   display: none;
-      // }
-      // &[class*="sixth"] {
-      //   display: none;
-      // }
+      pointer-events: all;
     }
+
+    // & > * {
+
+    //   &[class*="first"] {
+    //     display: none;
+    //   }
+    //   &[class*="second"] {
+    //     display: none;
+    //   }
+    //   &[class*="third"] {
+    //     display: none;
+    //   }
+    //   &[class*="fourth"] {
+    //     display: none;
+    //   }
+    //   &[class*="fifth"] {
+    //     display: none;
+    //   }
+    //   &[class*="sixth"] {
+    //     display: none;
+    //   }
+    //   &[class*="seventh"] {
+    //     display: none;
+    //   }
+    //   &[class*="eights"] {
+    //     display: none;
+    //   }
+    //   &[class*="ninth"] {
+    //     display: none;
+    //   }
+    //   &[class*="tenth"] {
+    //     display: none;
+    //   }
+    //   &[class*="eleventh"] {
+    //     display: none;
+    //   }
+    //   &[class*="twelves"] {
+    //     display: none;
+    //   }
+    //   &[class*="thirteens"] {
+    //     display: none;
+    //   }
+    //   &[class*="block"] {
+    //     display: none;
+    //   }
+    //   &[class*="green-bg"] {
+    //     display: none;
+    //   }
+    //   &[class*="orange-bg"] {
+    //     display: none;
+    //   }
+    // }
   }
 }

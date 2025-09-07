@@ -74,14 +74,7 @@ export default function petrols(section: HTMLElement) {
       },
       "<"
     );
-    tl.from(
-      ".blue-block",
-      {
-        autoAlpha: 0,
-        duration: 1,
-      },
-      "<"
-    );
+
     tl.from(".fourth.fade", {
       autoAlpha: 0,
       duration: 1,
@@ -125,10 +118,5 @@ export default function petrols(section: HTMLElement) {
       },
       "<"
     );
-    tl.from(".conversion", {
-      autoAlpha: 0,
-      duration: 1,
-      y: 30,
-    });
   }, section);
 }

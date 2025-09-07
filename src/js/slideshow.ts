@@ -21,6 +21,7 @@ import profile from "./slides/profile";
 import gasoline from "./slides/gasoline";
 import investChart from "./slides/investChart";
 import petrols from "./slides/petrols";
+import scheme from "./slides/scheme";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -78,6 +79,8 @@ export default function slideshow() {
         contexts[swiper.activeIndex] = investChart(section);
       } else if (name === "petrols") {
         contexts[swiper.activeIndex] = petrols(section);
+      } else if (name === "scheme") {
+        contexts[swiper.activeIndex] = scheme(section);
       }
     };
 
