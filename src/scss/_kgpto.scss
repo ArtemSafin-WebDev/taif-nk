@@ -1,0 +1,42 @@
+.kgpto {
+  position: relative;
+  isolation: isolate;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3rem;
+  overflow: hidden;
+  background-color: var(--text-color);
+  color: white;
+}
+
+.kgpto__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.kgpto__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kgpto__content {
+  padding: 5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.kgpto__title {
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  font-family: var(--rf-dewi-expanded);
+}

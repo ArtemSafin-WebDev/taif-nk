@@ -23,6 +23,10 @@ import investChart from "./slides/investChart";
 import petrols from "./slides/petrols";
 import scheme from "./slides/scheme";
 import effective from "./slides/effective";
+import kgpto from "./slides/kgpto";
+import about from "./slides/about";
+import goals from "./slides/goals";
+import { SwiperOptions } from "swiper/types";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -84,10 +88,16 @@ export default function slideshow() {
         contexts[swiper.activeIndex] = scheme(section);
       } else if (name === "effective") {
         contexts[swiper.activeIndex] = effective(section);
+      } else if (name === "kgpto") {
+        contexts[swiper.activeIndex] = kgpto(section);
+      } else if (name === "about") {
+        contexts[swiper.activeIndex] = about(section);
+      } else if (name === "goals") {
+        contexts[swiper.activeIndex] = goals(section);
       }
     };
 
-    const instance = new Swiper(container, {
+    const options: SwiperOptions = {
       direction: "vertical",
       speed: 1000,
       modules: [Keyboard, Mousewheel, Autoplay, EffectFade],
@@ -114,7 +124,18 @@ export default function slideshow() {
           }
         },
       },
-    });
+    };
+    if (element.hasAttribute("data-autoplay")) {
+      // options.allowTouchMove = false;
+      options.loop = true;
+      options.autoplay = {
+        delay: 10000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+      };
+    }
+
+    const instance = new Swiper(container, options);
     instance.init();
   });
 }
