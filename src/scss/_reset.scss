@@ -30,6 +30,13 @@ html {
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
   scroll-padding-top: 10rem;
+
+  @media only screen and (min-height: 1000px) {
+    font-size: clamp(2px, 0.6vw, 125px);
+  }
+  @media only screen and (min-height: 1200px) {
+    font-size: clamp(2px, 0.62vw, 125px);
+  }
 }
 
 body {
@@ -230,4 +237,13 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   overflow-x: hidden;
   overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
 }

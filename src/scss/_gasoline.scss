@@ -1,6 +1,7 @@
 .gasoline {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .gasoline__heading {
@@ -18,6 +19,8 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2rem;
+  flex-grow: 1;
+  margin-top: auto;
 }
 
 .gasoline__left-card {
@@ -25,6 +28,8 @@
   border-radius: 3rem;
   background: #fff;
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
 }
 
 .gasoline__left-card-title {
