@@ -27,6 +27,7 @@ import kgpto from "./slides/kgpto";
 import about from "./slides/about";
 import goals from "./slides/goals";
 import { SwiperOptions } from "swiper/types";
+import products from "./slides/products";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -94,6 +95,8 @@ export default function slideshow() {
         contexts[swiper.activeIndex] = about(section);
       } else if (name === "goals") {
         contexts[swiper.activeIndex] = goals(section);
+      } else if (name === "products") {
+        contexts[swiper.activeIndex] = products(section);
       }
     };
 
