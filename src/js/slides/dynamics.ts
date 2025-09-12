@@ -8,7 +8,7 @@ export default function dynamics(section: HTMLElement) {
     const heading = section.querySelector(".dynamics__heading");
     const year = section.querySelector(".dynamics__year");
     let yearSplit = SplitText.create(year);
-    SplitText.create(heading, {
+    const instance = SplitText.create(heading, {
       type: "lines",
       autoSplit: true,
       onSplit: (self) => {
@@ -51,10 +51,13 @@ export default function dynamics(section: HTMLElement) {
           "<+=0.8"
         );
 
-        tl.from(
+        tl.fromTo(
           ".dynamics__chart-bar-bottom-inner",
           {
             height: 0,
+          },
+          {
+            height: "100%",
             duration: 1.2,
             stagger: {
               each: 0.1,
@@ -64,10 +67,13 @@ export default function dynamics(section: HTMLElement) {
           },
           0.5
         );
-        tl.from(
+        tl.fromTo(
           ".dynamics__chart-bar-top-inner",
           {
             height: 0,
+          },
+          {
+            height: "100%",
             duration: 1.2,
             stagger: {
               each: 0.1,
@@ -202,5 +208,8 @@ export default function dynamics(section: HTMLElement) {
         return tl;
       },
     });
+    return () => {
+      instance.revert();
+    };
   }, section);
 }

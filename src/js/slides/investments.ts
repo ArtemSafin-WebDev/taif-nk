@@ -15,7 +15,7 @@ export default function investments(section: HTMLElement) {
     ) as HTMLElement;
     const counter = section.querySelector(".investments__count");
     const targetValue = parseInt(counter?.textContent?.trim() || "0", 10);
-    SplitText.create(heading, {
+    const instance = SplitText.create(heading, {
       type: "lines, chars, words",
       autoSplit: true,
       onSplit: (self) => {
@@ -96,6 +96,7 @@ export default function investments(section: HTMLElement) {
 
     return () => {
       console.log("Investments reverted");
+      instance.revert();
       if (counter) counter.textContent = targetValue.toString();
     };
   }, section);

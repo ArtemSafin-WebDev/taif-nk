@@ -8,7 +8,7 @@ export default function sulfur(section: HTMLElement) {
     const heading = section.querySelector(".sulfur__title");
     const year = section.querySelector(".sulfur__year");
     let yearSplit = SplitText.create(year);
-    SplitText.create(heading, {
+    const instance = SplitText.create(heading, {
       autoSplit: true,
       type: "lines",
       onSplit: (self) => {
@@ -51,43 +51,57 @@ export default function sulfur(section: HTMLElement) {
           "<+=0.8"
         );
 
-        tl.from(
+        tl.fromTo(
           ".sulfur__chart-circle",
           {
-            duration: 1,
             scale: 0,
+          },
+          {
+            duration: 1,
+            scale: 1,
             stagger: 0.05,
             ease: "power2.out",
           },
           "<"
         );
-        tl.from(
+        tl.fromTo(
           ".sulfur__chart-mark-bar-inner",
           {
-            duration: 1,
             autoAlpha: 0,
             height: 0,
+          },
+          {
+            duration: 1,
+            autoAlpha: 1,
+            height: "100%",
             stagger: 0.05,
             ease: "power2.out",
           },
           "<"
         );
-        tl.from(
+        tl.fromTo(
           ".sulfur__chart-year-circle",
           {
-            duration: 1,
             autoAlpha: 0,
+          },
+          {
+            duration: 1,
+            autoAlpha: 1,
             stagger: 0.05,
             ease: "power2.out",
           },
           "<"
         );
-        tl.from(
+        tl.fromTo(
           ".sulfur__chart-year-text",
           {
-            duration: 1,
             autoAlpha: 0,
             yPercent: 60,
+          },
+          {
+            duration: 1,
+            autoAlpha: 1,
+            yPercent: 0,
             stagger: 0.05,
             ease: "power2.out",
           },
@@ -186,5 +200,9 @@ export default function sulfur(section: HTMLElement) {
         return tl;
       },
     });
+
+    return () => {
+      instance.revert();
+    };
   }, section);
 }

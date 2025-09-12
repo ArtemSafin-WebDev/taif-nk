@@ -7,7 +7,7 @@ export default function developments(section: HTMLElement) {
   return gsap.context(() => {
     const heading = section.querySelector(".developments__title");
 
-    SplitText.create(heading, {
+    const instance = SplitText.create(heading, {
       type: "lines",
       autoSplit: true,
       onSplit: (self) => {
@@ -28,11 +28,14 @@ export default function developments(section: HTMLElement) {
           }
         );
 
-        tl.from(
+        tl.fromTo(
           ".developments__bg-image",
           {
-            duration: 1,
             scale: 1.2,
+          },
+          {
+            duration: 1,
+            scale: 1,
           },
           "<"
         );
@@ -47,27 +50,38 @@ export default function developments(section: HTMLElement) {
           },
           "<+=0.4"
         );
-        tl.from(
+        tl.fromTo(
           ".developments__count-content",
           {
             autoAlpha: 0,
-            duration: 1,
             y: 40,
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+            y: 0,
           },
           "<"
         );
-        tl.from(
+        tl.fromTo(
           ".developments__card",
           {
             autoAlpha: 0,
+            y: 20,
+          },
+          {
+            autoAlpha: 1,
             duration: 1,
             stagger: 0.1,
-            y: 20,
+            y: 0,
           },
           "<"
         );
         return tl;
       },
     });
+    return () => {
+      instance.revert();
+    };
   }, section);
 }

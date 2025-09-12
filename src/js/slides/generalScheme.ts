@@ -8,98 +8,168 @@ export default function generalScheme(section: HTMLElement) {
     const tl = gsap.timeline({
       delay: 0.5,
     });
-    tl.from(".first.fade", {
-      autoAlpha: 0,
-      duration: 1,
-    });
+    tl.fromTo(
+      ".first.fade",
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+      }
+    );
 
-    tl.from(
+    tl.fromTo(
       ".first.scale",
       {
         autoAlpha: 0,
-        duration: 1,
         scale: 0,
+        transformOrigin: "center",
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+        scale: 1,
         transformOrigin: "center",
       },
       "<"
     );
-    tl.from(".second.fade", {
-      autoAlpha: 0,
-      duration: 1,
-    });
-    tl.from(
+    tl.fromTo(
+      ".second.fade",
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+      }
+    );
+    tl.fromTo(
       ".second.scale",
       {
         autoAlpha: 0,
-        duration: 1,
         scale: 0,
+        transformOrigin: "center",
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+        scale: 1,
         transformOrigin: "center",
       },
       "<"
     );
-    tl.from(".third.fade", {
-      autoAlpha: 0,
-      duration: 1,
-    });
-    tl.from(
+    tl.fromTo(
+      ".third.fade",
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+      }
+    );
+    tl.fromTo(
       ".third.scale",
       {
         autoAlpha: 0,
-        duration: 1,
         scale: 0,
+        transformOrigin: "center",
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+        scale: 1,
         transformOrigin: "center",
       },
       "<"
     );
-    tl.from(".fourth.fade", {
-      autoAlpha: 0,
-      duration: 1,
-    });
-    tl.from(
+    tl.fromTo(
+      ".fourth.fade",
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+      }
+    );
+    tl.fromTo(
       ".fourth.scale",
       {
         autoAlpha: 0,
-        duration: 1,
         scale: 0,
+        transformOrigin: "center",
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+        scale: 1,
         transformOrigin: "center",
       },
       "<"
     );
-    tl.from(".fifth.fade", {
-      autoAlpha: 0,
-      duration: 1,
-    });
-    tl.from(
+    tl.fromTo(
+      ".fifth.fade",
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+      }
+    );
+    tl.fromTo(
       ".fifth.scale",
       {
         autoAlpha: 0,
-        duration: 1,
         scale: 0,
+        transformOrigin: "center",
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+        scale: 1,
         transformOrigin: "center",
       },
       "<"
     );
 
-    tl.from(".sixth.fade", {
-      autoAlpha: 0,
-      duration: 1,
-    });
-    tl.from(
+    tl.fromTo(
+      ".sixth.fade",
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+      }
+    );
+    tl.fromTo(
       ".sixth.scale",
       {
         autoAlpha: 0,
-        duration: 1,
         scale: 0,
+        transformOrigin: "center",
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+        scale: 1,
         transformOrigin: "center",
       },
       "<"
     );
-    tl.from(
+    tl.fromTo(
       ".legend-group",
       {
         autoAlpha: 0,
-        duration: 1,
         y: 30,
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+        y: 0,
       },
       0.5
     );

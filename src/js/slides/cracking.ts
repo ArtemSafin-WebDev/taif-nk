@@ -7,57 +7,85 @@ export default function cracking(section: HTMLElement) {
   return gsap.context(() => {
     const heading = section.querySelector(".cracking__heading");
 
-    SplitText.create(heading, {
+    const instance = SplitText.create(heading, {
       autoSplit: true,
       type: "lines",
       onSplit: (self) => {
         const tl = gsap.timeline({
           delay: 0.5,
         });
-        tl.from(self.lines, {
-          autoAlpha: 0,
-          x: -300,
-          stagger: 0.1,
-          duration: 1,
-        });
-        tl.from(".cracking__equipment", {
-          y: 30,
-          autoAlpha: 0,
-          duration: 1,
-          ease: "power2.out",
-        });
-        tl.from(
+        tl.fromTo(
+          self.lines,
+          {
+            autoAlpha: 0,
+            x: -300,
+          },
+          {
+            autoAlpha: 1,
+            x: 0,
+            stagger: 0.1,
+            duration: 1,
+          }
+        );
+        tl.fromTo(
+          ".cracking__equipment",
+          {
+            y: 30,
+            autoAlpha: 0,
+          },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 1,
+            ease: "power2.out",
+          }
+        );
+        tl.fromTo(
           ".cracking__numbers-title",
           {
             autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
             duration: 1,
           },
           "-=0.4"
         );
-        tl.from(
+        tl.fromTo(
           ".cracking__numbers-card",
           {
             autoAlpha: 0,
+            y: 30,
+          },
+          {
+            autoAlpha: 1,
             duration: 1,
             stagger: 0.1,
-            y: 30,
+            y: 0,
           },
           "-=0.5"
         );
-        tl.from(
+        tl.fromTo(
           ".cracking__green-card",
           {
             autoAlpha: 0,
             scale: 0,
+          },
+          {
+            autoAlpha: 1,
+            scale: 1,
             duration: 1,
             ease: "power2.out",
           },
           "<"
         );
-        tl.from(
+        tl.fromTo(
           ".cracking__green-card > *",
           {
             autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
             duration: 1,
           },
           "<+=0.5"
@@ -89,11 +117,15 @@ export default function cracking(section: HTMLElement) {
           },
           "<+=0.2"
         );
-        tl.from(
+        tl.fromTo(
           ".cracking__card-wrapper > *",
           {
             autoAlpha: 0,
             y: 20,
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
             duration: 1,
             ease: "power2.out",
           },
@@ -102,5 +134,8 @@ export default function cracking(section: HTMLElement) {
         return tl;
       },
     });
+    return () => {
+      instance.revert();
+    };
   }, section);
 }

@@ -9,7 +9,7 @@ export default function investments(section: HTMLElement) {
     const year = section.querySelector(".intro__year");
 
     let yearSplit = SplitText.create(year);
-    SplitText.create(heading, {
+    const instance = SplitText.create(heading, {
       type: "chars",
       autoSplit: true,
       onSplit: (self) => {
@@ -123,5 +123,9 @@ export default function investments(section: HTMLElement) {
         return tl;
       },
     });
+
+    return () => {
+      instance.revert();
+    };
   }, section);
 }

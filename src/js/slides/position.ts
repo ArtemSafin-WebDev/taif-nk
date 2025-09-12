@@ -8,7 +8,7 @@ export default function position(section: HTMLElement) {
     const heading = section.querySelector(".position__heading");
     const subtitle = section.querySelector(".position__subtitle");
     let yearSplit = SplitText.create(subtitle);
-    SplitText.create(heading, {
+    const instance = SplitText.create(heading, {
       type: "lines",
       autoSplit: true,
       onSplit: (self) => {
@@ -30,11 +30,15 @@ export default function position(section: HTMLElement) {
           }
         );
 
-        tl.from(
+        tl.fromTo(
           ".position__text",
           {
             y: 60,
             autoAlpha: 0,
+          },
+          {
+            y: 0,
+            autoAlpha: 1,
             duration: 1,
           },
           "<+=0.4"
@@ -53,42 +57,57 @@ export default function position(section: HTMLElement) {
           "<+=0.8"
         );
 
-        tl.from(
+        tl.fromTo(
           ".position__planet",
           {
             y: 80,
-            duration: 1,
             autoAlpha: 0,
+          },
+          {
+            y: 0,
+            duration: 1,
+            autoAlpha: 1,
             ease: "power2.out",
           },
           "<-=0.3"
         );
 
-        tl.from(
+        tl.fromTo(
           ".position__circle-bar-inner",
           {
             autoAlpha: 0,
             height: 0,
+          },
+          {
+            autoAlpha: 1,
+            height: "100%",
             duration: 1,
             stagger: 0,
           },
           "<+=0.3"
         );
-        tl.from(
+        tl.fromTo(
           ".position__circle-bar-title",
           {
             autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
             duration: 1,
             stagger: 0,
           },
           ">-=0.3"
         );
-        tl.from(
+        tl.fromTo(
           ".position__circle",
           {
             autoAlpha: 0,
-            duration: 1,
             scale: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+            scale: 1,
             ease: "power2.out",
           },
           "<-=0.1"
@@ -135,11 +154,15 @@ export default function position(section: HTMLElement) {
           "<+=0.6"
         );
 
-        tl.from(
+        tl.fromTo(
           ".position__card-text",
           {
             autoAlpha: 0,
             y: 10,
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
             duration: 0.5,
             ease: "power2.out",
           },
@@ -161,5 +184,8 @@ export default function position(section: HTMLElement) {
         return tl;
       },
     });
+    return () => {
+      instance.revert();
+    };
   }, section);
 }

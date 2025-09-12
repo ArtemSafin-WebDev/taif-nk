@@ -6,7 +6,7 @@ gsap.registerPlugin(SplitText);
 export default function info(section: HTMLElement) {
   return gsap.context(() => {
     const heading = section.querySelector(".info__heading");
-    SplitText.create(heading, {
+    const instance = SplitText.create(heading, {
       type: "lines",
       autoSplit: true,
       onSplit: (self) => {
@@ -28,42 +28,56 @@ export default function info(section: HTMLElement) {
           0
         );
 
-        tl.from(
+        tl.fromTo(
           ".info__card",
           {
             autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
             duration: 2,
             stagger: 0.2,
             ease: "power2.out",
           },
           "<+=0.6"
         );
-        tl.from(
+        tl.fromTo(
           ".info__arrow",
           {
             autoAlpha: 0,
-            duration: 0.5,
             scale: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.5,
+            scale: 1,
             stagger: 0.1,
           },
           "<+=0.6"
         );
 
-        tl.from(
+        tl.fromTo(
           ".info__card .info__card-wrapper",
           {
             autoAlpha: 0,
             scale: 0,
+          },
+          {
+            autoAlpha: 1,
+            scale: 1,
             duration: 0.9,
             stagger: 0.1,
             ease: "power2.out",
           },
           "<+=0.6"
         );
-        tl.from(
+        tl.fromTo(
           ".info__card .info__card-wrapper > *",
           {
             autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
             duration: 1,
           },
           ">-=0.4"
@@ -71,5 +85,8 @@ export default function info(section: HTMLElement) {
         return tl;
       },
     });
+    return () => {
+      instance.revert();
+    };
   }, section);
 }

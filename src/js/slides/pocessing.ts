@@ -7,7 +7,7 @@ export default function processing(section: HTMLElement) {
   return gsap.context(() => {
     const heading = section.querySelector(".processing__heading");
 
-    SplitText.create(heading, {
+    const instance = SplitText.create(heading, {
       type: "lines",
       autoSplit: true,
       onSplit: (self) => {
@@ -39,23 +39,31 @@ export default function processing(section: HTMLElement) {
           "<+=0.4"
         );
 
-        tl.from(
+        tl.fromTo(
           ".processing__list-item",
           {
             autoAlpha: 0,
+            y: 60,
+          },
+          {
+            autoAlpha: 1,
             duration: 2,
             stagger: 0.1,
-            y: 60,
+            y: 0,
             ease: "power2.out",
           },
           ">-=0.3"
         );
 
-        tl.from(
+        tl.fromTo(
           ".processing__table",
           {
             y: 60,
             autoAlpha: 0,
+          },
+          {
+            y: 0,
+            autoAlpha: 1,
             duration: 1,
           },
           "<+=0.4"
@@ -63,5 +71,8 @@ export default function processing(section: HTMLElement) {
         return tl;
       },
     });
+    return () => {
+      instance.revert();
+    };
   }, section);
 }
