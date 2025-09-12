@@ -13,7 +13,9 @@ export default function investments(section: HTMLElement) {
       type: "chars",
       autoSplit: true,
       onSplit: (self) => {
-        const tl = gsap.timeline();
+        const tl = gsap.timeline({
+          delay: 0.5,
+        });
         tl.fromTo(
           ".intro__bg-image",
           {
@@ -22,8 +24,7 @@ export default function investments(section: HTMLElement) {
           {
             scale: 1,
             duration: 1,
-          },
-          0.3
+          }
         );
 
         tl.fromTo(
@@ -37,7 +38,7 @@ export default function investments(section: HTMLElement) {
             duration: 1,
             autoAlpha: 1,
           },
-          0.3
+          "<"
         );
         tl.fromTo(
           ".intro__small-text",
