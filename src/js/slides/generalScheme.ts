@@ -5,7 +5,6 @@ gsap.registerPlugin(SplitText);
 
 export default function generalScheme(section: HTMLElement) {
   return gsap.context(() => {
-    console.log("General scheme animation");
     const tl = gsap.timeline({
       delay: 0.5,
     });

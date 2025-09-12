@@ -3,7 +3,9 @@ import "../scss/style.scss";
 import slideshow from "./slideshow";
 
 document.addEventListener("DOMContentLoaded", () => {
-  slideshow();
+  document.fonts.ready.then(() => {
+    slideshow();
+  });
 });
 
 window.addEventListener("load", () => {

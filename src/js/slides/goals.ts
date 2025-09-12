@@ -6,50 +6,54 @@ gsap.registerPlugin(SplitText);
 export default function goals(section: HTMLElement) {
   return gsap.context(() => {
     const heading = section.querySelector(".goals__large-text");
-
-    const tl = gsap.timeline();
-    let headingSplit = SplitText.create(heading);
-
-    tl.from(headingSplit.lines, {
-      autoAlpha: 0,
-      x: -300,
-      stagger: 0.1,
-      duration: 1,
+    SplitText.create(heading, {
+      autoSplit: true,
+      type: "lines",
+      onSplit: (self) => {
+        const tl = gsap.timeline();
+        tl.from(self.lines, {
+          autoAlpha: 0,
+          x: -300,
+          stagger: 0.1,
+          duration: 1,
+        });
+        tl.from(
+          ".goals__bg-image",
+          {
+            scale: 1.2,
+            duration: 1,
+          },
+          "<"
+        );
+        tl.from(
+          ".goals__small-text",
+          {
+            autoAlpha: 0,
+            duration: 1,
+            y: 50,
+          },
+          "<+=0.5"
+        );
+        tl.from(
+          ".goals__title",
+          {
+            autoAlpha: 0,
+            duration: 1,
+          },
+          "-=0.5"
+        );
+        tl.from(
+          ".goals__goals-list-item",
+          {
+            autoAlpha: 0,
+            duration: 1,
+            y: 60,
+            stagger: 0.05,
+          },
+          "-=0.5"
+        );
+        return tl;
+      },
     });
-    tl.from(
-      ".goals__bg-image",
-      {
-        scale: 1.2,
-        duration: 1,
-      },
-      "<"
-    );
-    tl.from(
-      ".goals__small-text",
-      {
-        autoAlpha: 0,
-        duration: 1,
-        y: 50,
-      },
-      "<+=0.5"
-    );
-    tl.from(
-      ".goals__title",
-      {
-        autoAlpha: 0,
-        duration: 1,
-      },
-      "-=0.5"
-    );
-    tl.from(
-      ".goals__goals-list-item",
-      {
-        autoAlpha: 0,
-        duration: 1,
-        y: 60,
-        stagger: 0.05,
-      },
-      "-=0.5"
-    );
   }, section);
 }
