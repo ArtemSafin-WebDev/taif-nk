@@ -940,7 +940,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<"
         );
-        tl.timeScale(0.8);
+        tl.timeScale(1.2);
         return tl;
       },
     });

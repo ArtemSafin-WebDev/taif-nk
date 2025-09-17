@@ -69,7 +69,7 @@ export default function investments(section: HTMLElement) {
           },
           {
             innerText: targetValue,
-            duration: 2,
+            duration: 1,
             ease: "none",
             snap: { innerText: 1 }, // Snap to whole numbers
           },

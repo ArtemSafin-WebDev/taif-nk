@@ -441,6 +441,7 @@ export default function scheme(section: HTMLElement) {
           },
           "<"
         );
+        tl.timeScale(1.5);
         return tl;
       },
     });

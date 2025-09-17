@@ -51,17 +51,17 @@ export default function taifcombi(section: HTMLElement) {
           },
           "<"
         );
-        tl.fromTo(
-          ".yellow-block",
-          {
-            autoAlpha: 0,
-          },
-          {
-            autoAlpha: 1,
-            duration: 1,
-          },
-          "<+=0.4"
-        );
+        // tl.fromTo(
+        //   ".yellow-block",
+        //   {
+        //     autoAlpha: 0,
+        //   },
+        //   {
+        //     autoAlpha: 1,
+        //     duration: 1,
+        //   },
+        //   "<+=0.4"
+        // );
 
         tl.fromTo(
           ".first.fade",
