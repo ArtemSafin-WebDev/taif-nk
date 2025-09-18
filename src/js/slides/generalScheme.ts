@@ -173,5 +173,6 @@ export default function generalScheme(section: HTMLElement) {
       },
       0.5
     );
+    tl.timeScale(0.2);
   }, section);
 }

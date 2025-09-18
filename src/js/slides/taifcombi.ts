@@ -238,6 +238,7 @@ export default function taifcombi(section: HTMLElement) {
             y: 0,
           }
         );
+        tl.timeScale(0.2);
         return tl;
       },
     });

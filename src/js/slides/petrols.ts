@@ -205,7 +205,7 @@ export default function petrols(section: HTMLElement) {
           },
           "<"
         );
-        tl.timeScale(1.2);
+        tl.timeScale(0.4);
         return tl;
       },
     });
