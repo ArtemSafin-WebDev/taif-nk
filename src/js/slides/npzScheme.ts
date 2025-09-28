@@ -945,7 +945,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<"
         );
-        tl.timeScale(0.2);
+        tl.timeScale(0.8);
         return tl;
       },
     });

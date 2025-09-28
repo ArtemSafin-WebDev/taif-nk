@@ -64,7 +64,7 @@ export default function taifcombi(section: HTMLElement) {
         // );
 
         tl.fromTo(
-          ".first.fade",
+          ".first.fade:not(.block)",
           {
             autoAlpha: 0,
           },
@@ -75,7 +75,7 @@ export default function taifcombi(section: HTMLElement) {
         );
 
         tl.fromTo(
-          ".first.scale",
+          ".first.scale:not(.block)",
           {
             autoAlpha: 0,
             scale: 0,
@@ -90,17 +90,19 @@ export default function taifcombi(section: HTMLElement) {
           "<"
         );
         tl.fromTo(
-          ".second.fade",
+          ".first.fade.block",
           {
             autoAlpha: 0,
           },
           {
             autoAlpha: 1,
             duration: 1,
-          }
+          },
+          ">-=0.5"
         );
+
         tl.fromTo(
-          ".second.scale",
+          ".first.scale.block",
           {
             autoAlpha: 0,
             scale: 0,
@@ -115,7 +117,7 @@ export default function taifcombi(section: HTMLElement) {
           "<"
         );
         tl.fromTo(
-          ".third.fade",
+          ".second.fade:not(.block)",
           {
             autoAlpha: 0,
           },
@@ -125,7 +127,84 @@ export default function taifcombi(section: HTMLElement) {
           }
         );
         tl.fromTo(
-          ".third.scale",
+          ".second.scale:not(.block)",
+          {
+            autoAlpha: 0,
+            scale: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+            scale: 1,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+        tl.fromTo(
+          ".second.fade.block",
+          {
+            autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+          },
+          ">-=0.5"
+        );
+        tl.fromTo(
+          ".second.scale.block",
+          {
+            autoAlpha: 0,
+            scale: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+            scale: 1,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+        tl.fromTo(
+          ".third.fade:not(.block)",
+          {
+            autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+          }
+        );
+        tl.fromTo(
+          ".third.scale:not(.block)",
+          {
+            autoAlpha: 0,
+            scale: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+            scale: 1,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+        tl.fromTo(
+          ".third.fade.block",
+          {
+            autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+          },
+          ">-=0.5"
+        );
+        tl.fromTo(
+          ".third.scale.block",
           {
             autoAlpha: 0,
             scale: 0,
@@ -151,7 +230,7 @@ export default function taifcombi(section: HTMLElement) {
           "<"
         );
         tl.fromTo(
-          ".fourth.fade",
+          ".fourth.fade:not(.block)",
           {
             autoAlpha: 0,
           },
@@ -161,7 +240,7 @@ export default function taifcombi(section: HTMLElement) {
           }
         );
         tl.fromTo(
-          ".fourth.scale",
+          ".fourth.scale:not(.block)",
           {
             autoAlpha: 0,
             scale: 0,
@@ -176,7 +255,33 @@ export default function taifcombi(section: HTMLElement) {
           "<"
         );
         tl.fromTo(
-          ".fifth.fade",
+          ".fourth.fade.block",
+          {
+            autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+          },
+          ">-=0.5"
+        );
+        tl.fromTo(
+          ".fourth.scale.block",
+          {
+            autoAlpha: 0,
+            scale: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+            scale: 1,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+        tl.fromTo(
+          ".fifth.fade:not(.block)",
           {
             autoAlpha: 0,
           },
@@ -186,7 +291,33 @@ export default function taifcombi(section: HTMLElement) {
           }
         );
         tl.fromTo(
-          ".fifth.scale",
+          ".fifth.scale:not(.block)",
+          {
+            autoAlpha: 0,
+            scale: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+            scale: 1,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+        tl.fromTo(
+          ".fifth.fade.block",
+          {
+            autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+          },
+          ">-=0.5"
+        );
+        tl.fromTo(
+          ".fifth.scale.block",
           {
             autoAlpha: 0,
             scale: 0,
@@ -202,7 +333,7 @@ export default function taifcombi(section: HTMLElement) {
         );
 
         tl.fromTo(
-          ".sixth.fade",
+          ".sixth.fade:not(.block)",
           {
             autoAlpha: 0,
           },
@@ -212,7 +343,33 @@ export default function taifcombi(section: HTMLElement) {
           }
         );
         tl.fromTo(
-          ".sixth.scale",
+          ".sixth.scale:not(.block)",
+          {
+            autoAlpha: 0,
+            scale: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+            scale: 1,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+        tl.fromTo(
+          ".sixth.fade.block",
+          {
+            autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 1,
+          },
+          ">-=0.5"
+        );
+        tl.fromTo(
+          ".sixth.scale.block",
           {
             autoAlpha: 0,
             scale: 0,
@@ -238,7 +395,7 @@ export default function taifcombi(section: HTMLElement) {
             y: 0,
           }
         );
-        tl.timeScale(0.2);
+        tl.timeScale(0.8);
         return tl;
       },
     });
