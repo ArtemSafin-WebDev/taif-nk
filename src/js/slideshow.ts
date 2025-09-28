@@ -74,7 +74,7 @@ export default function slideshow() {
       } else if (name === "production") {
         contexts[swiper.activeIndex] = production(section);
       } else if (name === "taifcombi") {
-        contexts[swiper.activeIndex] = taifcombi(section);
+        // contexts[swiper.activeIndex] = taifcombi(section);
       } else if (name === "cracking") {
         contexts[swiper.activeIndex] = cracking(section);
       } else if (name === "profile") {

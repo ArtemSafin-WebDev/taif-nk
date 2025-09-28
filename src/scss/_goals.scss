@@ -119,6 +119,7 @@
   background-color: #fff;
   color: var(--text-color);
   border-radius: 3rem;
+  padding: 3.2rem;
 
   &::before {
     content: counter(ordered-list, decimal-leading-zero);
@@ -128,6 +129,9 @@
     line-height: 110%;
     letter-spacing: -0.072rem;
     margin-bottom: 1.6rem;
+
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
   }
 }
 
@@ -138,6 +142,9 @@
   line-height: 110%;
   letter-spacing: -0.072rem;
   margin-bottom: 1.6rem;
+
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
 }
 
 .goals__goals-card-text {
@@ -146,4 +153,6 @@
   font-weight: 300;
   line-height: 115%;
   color: rgba(#1a1a1c, 0.6);
+
+  font-size: 1.6rem;
 }

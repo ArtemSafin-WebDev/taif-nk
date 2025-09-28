@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 30rem;
+  max-width: 40rem;
   margin-bottom: 2rem;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .cracking__equipment-text {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
@@ -66,7 +66,7 @@
 .cracking__numbers-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-gap: 5rem;
+  grid-gap: 4rem;
   grid-row-gap: 4rem;
   align-items: center;
 }
@@ -118,6 +118,7 @@
 .cracking__green-card {
   padding: 3rem;
   aspect-ratio: 408 / 209;
+  aspect-ratio: 408 / 150;
   color: white;
   gap: 0.8rem;
   display: flex;
@@ -145,7 +146,7 @@
   font-weight: 300;
   line-height: 115%;
   color: rgba(#f4f4f4, 0.8);
-  max-width: 27rem;
+  max-width: 36rem;
 }
 
 .cracking__card {
@@ -215,7 +216,7 @@
 }
 
 .cracking__card-purpose-desc {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
@@ -239,8 +240,8 @@
 
       &::before {
         content: "";
-        width: 3px;
-        height: 3px;
+        width: 4px;
+        height: 4px;
         background-color: currentColor;
         border-radius: 50%;
         position: absolute;

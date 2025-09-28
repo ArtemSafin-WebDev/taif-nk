@@ -73,47 +73,6 @@ export default function position(section: HTMLElement) {
         );
 
         tl.fromTo(
-          ".position__circle-bar-inner",
-          {
-            autoAlpha: 0,
-            height: 0,
-          },
-          {
-            autoAlpha: 1,
-            height: "100%",
-            duration: 1,
-            stagger: 0,
-          },
-          "<+=0.3"
-        );
-        tl.fromTo(
-          ".position__circle-bar-title",
-          {
-            autoAlpha: 0,
-          },
-          {
-            autoAlpha: 1,
-            duration: 1,
-            stagger: 0,
-          },
-          ">-=0.3"
-        );
-        tl.fromTo(
-          ".position__circle",
-          {
-            autoAlpha: 0,
-            scale: 0,
-          },
-          {
-            autoAlpha: 1,
-            duration: 1,
-            scale: 1,
-            ease: "power2.out",
-          },
-          "<-=0.1"
-        );
-
-        tl.fromTo(
           ".position__card",
           {
             autoAlpha: 0,
@@ -125,6 +84,220 @@ export default function position(section: HTMLElement) {
           },
           "<"
         );
+        tl.fromTo(
+          ".position__card-bg-image",
+          {
+            scale: 1.2,
+          },
+          {
+            scale: 1,
+            duration: 1,
+            ease: "power2.out",
+          },
+          "<"
+        );
+
+        tl.fromTo(
+          ".position__column:nth-child(2) .position__circle-bar-inner",
+          {
+            autoAlpha: 0,
+            height: 0,
+          },
+          {
+            autoAlpha: 1,
+            height: "100%",
+            duration: 0.6,
+            stagger: 0,
+          },
+          "<+=0.3"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(2) .position__circle-bar-title",
+          {
+            autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.6,
+            stagger: 0,
+          },
+          ">-=0.3"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(2) .position__circle",
+          {
+            autoAlpha: 0,
+            scale: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.6,
+            scale: 1,
+            ease: "power2.out",
+          },
+          "<-=0.1"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(4) .position__circle-bar-inner",
+          {
+            autoAlpha: 0,
+            height: 0,
+          },
+          {
+            autoAlpha: 1,
+            height: "100%",
+            duration: 0.6,
+            stagger: 0,
+          },
+          "<+=0.3"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(4) .position__circle-bar-title",
+          {
+            autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.6,
+            stagger: 0,
+          },
+          ">-=0.3"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(4) .position__circle",
+          {
+            autoAlpha: 0,
+            scale: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.6,
+            scale: 1,
+            ease: "power2.out",
+          },
+          "<-=0.1"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(5) .position__circle-bar-inner",
+          {
+            autoAlpha: 0,
+            height: 0,
+          },
+          {
+            autoAlpha: 1,
+            height: "100%",
+            duration: 0.6,
+            stagger: 0,
+          },
+          "<+=0.3"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(5) .position__circle-bar-title",
+          {
+            autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.6,
+            stagger: 0,
+          },
+          ">-=0.3"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(5) .position__circle",
+          {
+            autoAlpha: 0,
+            scale: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.6,
+            scale: 1,
+            ease: "power2.out",
+          },
+          "<-=0.1"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(3) .position__circle-bar-inner",
+          {
+            autoAlpha: 0,
+            height: 0,
+          },
+          {
+            autoAlpha: 1,
+            height: "100%",
+            duration: 0.6,
+            stagger: 0,
+          },
+          "<+=0.3"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(3) .position__circle-bar-title",
+          {
+            autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.6,
+            stagger: 0,
+          },
+          ">-=0.3"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(3) .position__circle",
+          {
+            autoAlpha: 0,
+            scale: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.6,
+            scale: 1,
+            ease: "power2.out",
+          },
+          "<-=0.1"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(1) .position__circle-bar-inner",
+          {
+            autoAlpha: 0,
+            height: 0,
+          },
+          {
+            autoAlpha: 1,
+            height: "100%",
+            duration: 0.6,
+            stagger: 0,
+          },
+          "<+=0.3"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(1) .position__circle-bar-title",
+          {
+            autoAlpha: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.6,
+            stagger: 0,
+          },
+          ">-=0.3"
+        );
+        tl.fromTo(
+          ".position__column:nth-child(1) .position__circle",
+          {
+            autoAlpha: 0,
+            scale: 0,
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.6,
+            scale: 1,
+            ease: "power2.out",
+          },
+          "<-=0.1"
+        );
+
         tl.fromTo(
           ".position__card-wrapper",
           {

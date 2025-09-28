@@ -80,7 +80,7 @@ export default function powers(section: HTMLElement) {
             autoAlpha: 1,
             duration: 1,
           },
-          "<+=1"
+          0.5
         );
         tl.fromTo(
           ".powers__legend",

@@ -93,6 +93,47 @@ export default function npzScheme(section: HTMLElement) {
           }
         );
         tl.fromTo(
+          ".label-8",
+          {
+            scale: 0,
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            scale: 1,
+            autoAlpha: 1,
+            duration: 0.4,
+            transformOrigin: "center",
+          }
+        );
+        tl.fromTo(
+          ".orange-line-3",
+          {
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.4,
+            transformOrigin: "center",
+          }
+        );
+        tl.fromTo(
+          ".block-5",
+          {
+            scale: 0,
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            scale: 1,
+            autoAlpha: 1,
+            duration: 0.4,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+        tl.fromTo(
           ".green-line-13",
           {
             autoAlpha: 0,
@@ -122,6 +163,7 @@ export default function npzScheme(section: HTMLElement) {
           "<"
         );
         tl.addLabel("green-lines-appear");
+
         tl.fromTo(
           ".green-line-1",
           {
@@ -177,6 +219,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<"
         );
+
         tl.fromTo(
           ".green-line-15",
           {
@@ -207,6 +250,59 @@ export default function npzScheme(section: HTMLElement) {
         );
         tl.fromTo(
           ".block-7",
+          {
+            scale: 0,
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            scale: 1,
+            autoAlpha: 1,
+            duration: 0.4,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+        tl.fromTo(
+          ".blue-line-1",
+          {
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.4,
+            transformOrigin: "center",
+          }
+        );
+        tl.fromTo(
+          ".blue-line-2",
+          {
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.4,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+        tl.fromTo(
+          ".blue-line-3",
+          {
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.4,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+        tl.fromTo(
+          ".small-label-7",
           {
             scale: 0,
             autoAlpha: 0,
@@ -418,62 +514,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<"
         );
-        tl.addLabel("grey-lines-appear");
-        tl.fromTo(
-          ".grey-line-1",
-          {
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            autoAlpha: 1,
-            duration: 0.4,
-            transformOrigin: "center",
-          }
-        );
-        tl.fromTo(
-          ".label-6",
-          {
-            scale: 0,
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            scale: 1,
-            autoAlpha: 1,
-            duration: 0.4,
-            transformOrigin: "center",
-          },
-          "<"
-        );
-        tl.fromTo(
-          ".grey-line-2",
-          {
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            autoAlpha: 1,
-            duration: 0.4,
-            transformOrigin: "center",
-          },
-          "grey-lines-appear"
-        );
-        tl.fromTo(
-          ".label-7",
-          {
-            scale: 0,
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            scale: 1,
-            autoAlpha: 1,
-            duration: 0.4,
-            transformOrigin: "center",
-          },
-          "<"
-        );
+
         tl.addLabel("nafta-appear");
         tl.fromTo(
           ".green-line-14",
@@ -530,100 +571,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<"
         );
-        tl.fromTo(
-          ".label-8",
-          {
-            scale: 0,
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            scale: 1,
-            autoAlpha: 1,
-            duration: 0.4,
-            transformOrigin: "center",
-          }
-        );
-        tl.fromTo(
-          ".orange-line-3",
-          {
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            autoAlpha: 1,
-            duration: 0.4,
-            transformOrigin: "center",
-          }
-        );
-        tl.fromTo(
-          ".block-5",
-          {
-            scale: 0,
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            scale: 1,
-            autoAlpha: 1,
-            duration: 0.4,
-            transformOrigin: "center",
-          },
-          "<"
-        );
-        tl.fromTo(
-          ".blue-line-1",
-          {
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            autoAlpha: 1,
-            duration: 0.4,
-            transformOrigin: "center",
-          }
-        );
-        tl.fromTo(
-          ".blue-line-2",
-          {
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            autoAlpha: 1,
-            duration: 0.4,
-            transformOrigin: "center",
-          },
-          "<"
-        );
-        tl.fromTo(
-          ".blue-line-3",
-          {
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            autoAlpha: 1,
-            duration: 0.4,
-            transformOrigin: "center",
-          },
-          "<"
-        );
-        tl.fromTo(
-          ".small-label-7",
-          {
-            scale: 0,
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            scale: 1,
-            autoAlpha: 1,
-            duration: 0.4,
-            transformOrigin: "center",
-          },
-          "<"
-        );
+
         tl.fromTo(
           ".green-line-12",
           {
@@ -828,8 +776,65 @@ export default function npzScheme(section: HTMLElement) {
           },
           "dt-nodes"
         );
+
         tl.fromTo(
           ".block-3",
+          {
+            scale: 0,
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            scale: 1,
+            autoAlpha: 1,
+            duration: 0.4,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+
+        tl.fromTo(
+          ".grey-line-1",
+          {
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.4,
+            transformOrigin: "center",
+          }
+        );
+        tl.fromTo(
+          ".label-6",
+          {
+            scale: 0,
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            scale: 1,
+            autoAlpha: 1,
+            duration: 0.4,
+            transformOrigin: "center",
+          },
+          "<"
+        );
+        tl.fromTo(
+          ".grey-line-2",
+          {
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            autoAlpha: 1,
+            duration: 0.4,
+            transformOrigin: "center",
+          },
+          "-=0.8"
+        );
+        tl.fromTo(
+          ".label-7",
           {
             scale: 0,
             autoAlpha: 0,
@@ -940,7 +945,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<"
         );
-        tl.timeScale(0.3);
+        tl.timeScale(0.2);
         return tl;
       },
     });

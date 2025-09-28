@@ -62,19 +62,19 @@ export default function investments(section: HTMLElement) {
           },
           "<+=1"
         );
-        tl.fromTo(
-          counter,
-          {
-            innerText: 0,
-          },
-          {
-            innerText: targetValue,
-            duration: 1,
-            ease: "none",
-            snap: { innerText: 1 }, // Snap to whole numbers
-          },
-          "<" // Start counter animation 0.5 seconds before heading animation ends
-        );
+        // tl.fromTo(
+        //   counter,
+        //   {
+        //     innerText: 0,
+        //   },
+        //   {
+        //     innerText: targetValue,
+        //     duration: 1,
+        //     ease: "none",
+        //     snap: { innerText: 1 },
+        //   },
+        //   "<"
+        // );
 
         tl.fromTo(
           ".investments__wrapper",
@@ -88,7 +88,7 @@ export default function investments(section: HTMLElement) {
             duration: 0.7,
             ease: "power2.out",
           },
-          "+=0.1"
+          "<+=0.3"
         );
         return tl;
       },
