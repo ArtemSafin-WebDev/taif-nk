@@ -430,6 +430,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<"
         );
+        tl.addLabel("dfvp-after");
         tl.fromTo(
           ".grey-line-5",
           {
@@ -543,6 +544,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<"
         );
+        tl.addLabel("nafta-appear-after");
         tl.fromTo(
           ".green-line-6",
           {
@@ -554,7 +556,7 @@ export default function npzScheme(section: HTMLElement) {
             duration: 0.4,
             transformOrigin: "center",
           },
-          "nafta-appear"
+          "green-lines-appear+=0.4"
         );
         tl.fromTo(
           ".small-label-2",
@@ -582,7 +584,8 @@ export default function npzScheme(section: HTMLElement) {
             autoAlpha: 1,
             duration: 0.4,
             transformOrigin: "center",
-          }
+          },
+          "dfvp-after-=0.4"
         );
         tl.fromTo(
           ".small-label-3",
@@ -609,7 +612,8 @@ export default function npzScheme(section: HTMLElement) {
             autoAlpha: 1,
             duration: 0.4,
             transformOrigin: "center",
-          }
+          },
+          "dfvp-after-=0.4"
         );
         tl.fromTo(
           ".small-label-4",
@@ -945,7 +949,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<"
         );
-        tl.timeScale(0.8);
+        tl.timeScale(1);
         return tl;
       },
     });
