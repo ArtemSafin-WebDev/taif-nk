@@ -97,6 +97,10 @@
   font-weight: 300;
   line-height: 115%;
   color: rgba(#f4f4f4, 0.8);
+  margin-bottom: 0.4rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .end__email {
