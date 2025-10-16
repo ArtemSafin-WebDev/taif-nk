@@ -132,7 +132,9 @@ export default function slideshow() {
       // options.allowTouchMove = false;
       options.loop = true;
       options.autoplay = {
-        delay: 10000,
+        delay: element.getAttribute("data-autoplay")
+          ? Number(element.getAttribute("data-autoplay"))
+          : 15000,
         disableOnInteraction: false,
         pauseOnMouseEnter: false,
       };
