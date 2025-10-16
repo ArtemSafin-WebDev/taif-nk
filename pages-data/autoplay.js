@@ -1,6 +1,6 @@
 const autoplay = {
   "/autoplay.html": {
-    title: "Главная страница",
+    title: "Таиф НК",
   },
 };
 
