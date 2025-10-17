@@ -353,21 +353,7 @@ export default function petrols(section: HTMLElement) {
           },
           "<"
         );
-        tl.fromTo(
-          ".ppf-bbf-label",
-          {
-            scale: 0,
-            autoAlpha: 0,
-            transformOrigin: "center",
-          },
-          {
-            scale: 1,
-            autoAlpha: 1,
-            duration: 1,
-            transformOrigin: "center",
-          },
-          "<+=0.5"
-        );
+
         tl.fromTo(
           ".nafta-line",
           {
@@ -393,6 +379,21 @@ export default function petrols(section: HTMLElement) {
             autoAlpha: 1,
             duration: 1,
             transformOrigin: "left center",
+          },
+          "<"
+        );
+        tl.fromTo(
+          ".ppf-bbf-label",
+          {
+            scale: 0,
+            autoAlpha: 0,
+            transformOrigin: "center",
+          },
+          {
+            scale: 1,
+            autoAlpha: 1,
+            duration: 1,
+            transformOrigin: "center",
           },
           "<"
         );
