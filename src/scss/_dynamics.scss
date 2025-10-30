@@ -8,7 +8,7 @@
 
 .dynamics__chart {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-gap: 1.5rem;
   margin-top: auto;
   grid-row-gap: 4rem;
@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   height: var(--percentage, 20px);
-  min-height: 7.2rem;
+  min-height: 6.6rem;
   position: relative;
   overflow: hidden;
 }
