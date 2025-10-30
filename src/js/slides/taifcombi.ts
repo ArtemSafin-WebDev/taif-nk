@@ -395,7 +395,7 @@ export default function taifcombi(section: HTMLElement) {
             y: 0,
           }
         );
-        tl.timeScale(0.8);
+        tl.timeScale(1);
         return tl;
       },
     });

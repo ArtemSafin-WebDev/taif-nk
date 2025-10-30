@@ -28,6 +28,7 @@ import about from "./slides/about";
 import goals from "./slides/goals";
 import { SwiperOptions } from "swiper/types";
 import products from "./slides/products";
+import gsap from "gsap/all";
 
 export default function slideshow() {
   const elements = Array.from(
@@ -38,6 +39,8 @@ export default function slideshow() {
     if (!container) return;
 
     let contexts: gsap.Context[] = [];
+
+    let autoplayCall: gsap.core.Tween | null = null;
 
     const animateSlide = (swiper: Swiper) => {
       console.log("Active slide index", swiper.activeIndex);
@@ -98,6 +101,24 @@ export default function slideshow() {
       } else if (name === "products") {
         contexts[swiper.activeIndex] = products(section);
       }
+
+      if (element.hasAttribute("data-autoplay")) {
+        const defaultSlideDuration = element.getAttribute("data-autoplay")
+          ? Number(element.getAttribute("data-autoplay"))
+          : 15;
+        const currentSlideDuration = section.hasAttribute(
+          "data-section-duration"
+        )
+          ? Number(section.getAttribute("data-section-duration"))
+          : defaultSlideDuration;
+
+        if (autoplayCall) {
+          autoplayCall.kill();
+        }
+        autoplayCall = gsap.delayedCall(currentSlideDuration, () => {
+          swiper.slideNext();
+        });
+      }
     };
 
     const options: SwiperOptions = {
@@ -129,15 +150,14 @@ export default function slideshow() {
       },
     };
     if (element.hasAttribute("data-autoplay")) {
-      // options.allowTouchMove = false;
       options.loop = true;
-      options.autoplay = {
-        delay: element.getAttribute("data-autoplay")
-          ? Number(element.getAttribute("data-autoplay"))
-          : 15000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: false,
-      };
+      // options.autoplay = {
+      //   delay: element.getAttribute("data-autoplay")
+      //     ? Number(element.getAttribute("data-autoplay"))
+      //     : 15000,
+      //   disableOnInteraction: false,
+      //   pauseOnMouseEnter: false,
+      // };
     }
 
     const instance = new Swiper(container, options);

@@ -767,6 +767,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<+=0.2"
         );
+        tl.addLabel("light-reveal");
         tl.fromTo(
           ".green-line-16",
           {
@@ -807,7 +808,8 @@ export default function npzScheme(section: HTMLElement) {
             autoAlpha: 1,
             duration: 0.4,
             transformOrigin: "center",
-          }
+          },
+          "after-light-reveal+=0.4"
         );
         tl.fromTo(
           ".label-6",
@@ -835,7 +837,7 @@ export default function npzScheme(section: HTMLElement) {
             duration: 0.4,
             transformOrigin: "center",
           },
-          "-=0.8"
+          "after-light-reveal+=0.4"
         );
         tl.fromTo(
           ".label-7",
@@ -876,7 +878,8 @@ export default function npzScheme(section: HTMLElement) {
             autoAlpha: 1,
             duration: 0.4,
             transformOrigin: "center",
-          }
+          },
+          "light-reveal"
         );
         tl.fromTo(
           ".label-2",
@@ -893,6 +896,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<"
         );
+        tl.addLabel("after-light-reveal");
         tl.fromTo(
           ".green-line-3",
           {
@@ -904,7 +908,7 @@ export default function npzScheme(section: HTMLElement) {
             duration: 0.4,
             transformOrigin: "center",
           },
-          "before-end"
+          "light-reveal"
         );
         tl.fromTo(
           ".label-3",
@@ -932,7 +936,7 @@ export default function npzScheme(section: HTMLElement) {
             duration: 0.4,
             transformOrigin: "center",
           },
-          "before-end"
+          "light-reveal"
         );
         tl.fromTo(
           ".label-5",
@@ -949,7 +953,7 @@ export default function npzScheme(section: HTMLElement) {
           },
           "<"
         );
-        tl.timeScale(1);
+        tl.timeScale(0.8);
         return tl;
       },
     });
